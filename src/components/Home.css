@@ -1,0 +1,10 @@
+.homeBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeBody h2 {
+    margin-bottom: 90px;
+}

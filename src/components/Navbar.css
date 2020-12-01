@@ -1,0 +1,17 @@
+.navBar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    height: 100px;
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 50px;
+}
+
+.navBar li{
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+}
