@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Play.css';
 import paper from '../Images/paper.png';
 import cisors from '../Images/cisors.png';
@@ -38,10 +38,13 @@ const Play = () => {
         }
     }
 
-    const result = async () => {
-        await randomPick();
-        comparePick();
+    const result = () => {
+        randomPick();
     }
+
+    useEffect (() => {
+        comparePick();
+    }, [playerChoice, computerChoice])
 
     return(
         <div className='playBody'>
@@ -56,7 +59,7 @@ const Play = () => {
                 <img src={doctor} alt={doctor} className='avatarimg'  style={{width: 300, height: 400, position: 'absolute', left: 50, bottom: 150, borderRadius:20}} />
                 <div className="scorePartDoctor"><h2>Score : {playerCounter}</h2></div>
                 <div className="computerChoice">
-                    <img src={paperReverse} alt={paperReverse} className="playerWeapon"/>
+                    <img src={paperReverse} alt={paperReverse} />
                     <img src={cisorsReverse} alt={cisorsReverse} />
                     <img src={rockReverse} alt={rockReverse} />
                 </div>
